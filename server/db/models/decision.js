@@ -2,7 +2,7 @@ const Sequelize = require('sequelize')
 const db = require('../db')
 
 const Decision = db.define('decision', {
-  name: {
+  question: {
     type: Sequelize.STRING,
     allowNull: false
   }
