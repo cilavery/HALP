@@ -19,13 +19,13 @@ class Decision extends Component {
         {
           !this.props.decision.question
           ? <h1>What is your mind grappling with?</h1>
-          : <h1>Decide: {this.props.decision.question}</h1>
+          : <h1>SHOULD I: {this.props.decision.question}?</h1>
         }
 
         {
           !this.props.decision.question
           ? <DecisionForm postDecision={(e) => this.props.loadPostDecision(e)}/>
-          : <Points />
+          : <Points decision={this.props.decision} posPoints={this.props.posPoints} conPoints={this.props.conPoints}/>
         }
 
       </div>
@@ -37,7 +37,9 @@ class Decision extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    decision: state.decision
+    decision: state.decision,
+    posPoints: state.posPoint,
+    conPoints: state.conPoint
   }
 }
 

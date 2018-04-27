@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import YouShould from './YouShould'
+import YouShouldNot from './YouShouldNot';
 
 class Points extends Component {
   constructor(props) {
@@ -23,34 +24,34 @@ handleMouseHoverRight() {
 
 toggleHoverStateLeft(state) {
   return {
-    isHoveringLeft: !state.isHoveringLeft
+    isHoveringLeft: true
   }
 }
 
 toggleHoverStateRight(state) {
   return {
-    isHoveringRight: !state.isHoveringRight
+    isHoveringRight: true
   }
 }
 
   render() {
     return (
       <div className="points">
-        <div onMouseEnter={this.HandleMouseHover} onMouseLeave={this.handleMouseHoverLeft} className="you-should">
+        <div onMouseEnter={this.HandleMouseHoverLeft} onMouseLeave={this.handleMouseHoverLeft} className="you-should">
           <h1>You Should:</h1>
           {
             this.state.isHoveringLeft &&
             <div>
-              <YouShould />
+              <YouShould decision={this.props.decision} point={this.props.posPoints}/>
             </div>
           }
         </div>
-        <div onMouseEnter={this.HandleMouseHover} onMouseLeave={this.handleMouseHoverRight} className="you-should-not">
+        <div onMouseEnter={this.HandleMouseHoverRight} onMouseLeave={this.handleMouseHoverRight} className="you-should-not">
           <h1>You Should Not:</h1>
         {
           this.state.isHoveringRight &&
           <div>
-            <h3>Reason 1</h3>
+            <YouShouldNot decision={this.props.decision} point={this.props.conPoints}/>
           </div>
         }
         </div>

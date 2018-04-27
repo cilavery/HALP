@@ -1,8 +1,11 @@
+
 const {expect} = require('chai')
 const db = require('../server/db/index')
 
 const Decision = db.model('decision')
 const Point = db.model('point')
+
+
 
 
 describe('decisionModel', () => {
@@ -31,18 +34,4 @@ describe('decisionModel', () => {
 
 
 
-describe('Point model', () => {
-  beforeEach(() => {
-    return db.sync({force: true})
-  })
 
-  describe('pro', function() {
-    it('tests if a pro can be created');
-    it('tests if a con can be created');
-    it('test if decision can get all associated pro and con');
-    it('add weights for pro');
-    it('add weight for con');
-    it('get total weight from pro and con');
-  })
-
-})

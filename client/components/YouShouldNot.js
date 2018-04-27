@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {postPointPos} from '../store'
+import {postPointCon} from '../store'
 
 class YouShould extends Component {
   constructor(props) {
@@ -30,12 +30,12 @@ class YouShould extends Component {
 
   render() {
     const decisionId = this.props.decision.id
-    const posPoints = this.props.point
+    const conPoints = this.props.point
 
     return (
       <div>
         {
-          posPoints && posPoints.map(point => {
+          conPoints && conPoints.map(point => {
             return (
             <h3 key={point.id}>{point.weight} - {point.name}</h3>
             )
@@ -59,10 +59,10 @@ const mapDispatchToProps = (dispatch) => {
       const body = {
         name: e.target.pointName.value,
         weight: +e.target.weight.value,
-        category: 'pro',
+        category: 'con',
         decisionId
       }
-      dispatch(postPointPos(body))
+      dispatch(postPointCon(body))
     }
   }
 }

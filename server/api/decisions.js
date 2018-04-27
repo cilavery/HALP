@@ -15,3 +15,14 @@ router.post('/', (req, res, next) => {
     })
     .catch(next)
 })
+
+router.post('/points', (req, res, next) => {
+  Point.create(req.body)
+    .then(created => {
+      return created.setDecision(req.body.decisionId)
+    })
+    .then(updated => {
+      res.json(updated)
+    })
+    .catch(next)
+})

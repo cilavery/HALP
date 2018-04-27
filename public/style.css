@@ -28,8 +28,9 @@ form div {
   background: transparent;
   border: none;
   border-bottom: 1px solid #000000;
-  font-size: 1.5em;
-  color: rgb(121, 166, 210)
+  font-size: 1.3em;
+  color: rgb(121, 166, 210);
+  outline: none;
 }
 
 .btn-style {
@@ -45,11 +46,13 @@ form div {
   background: #fa969b;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
+  outline: none;
 }
 
 .btn-style:hover {
   background: #74e3a4;
   text-decoration: none;
+  outline: none;
 }
 
 .points {
@@ -66,9 +69,11 @@ form div {
 }
 
 .btn-point {
-  border: none;
+  border: none !important;
   color: transparent;
   background: transparent;
   display: none;
-  outline: 0;
+  outline: none !important;
+  font-size:0;
+  display: block;
 }
