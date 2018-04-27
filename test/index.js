@@ -23,7 +23,7 @@ describe('decisionModel', () => {
     })
 
     it('tests if a decision can be created', () => {
-      expect(shouldI).to.equal(shouldI)
+      expect(shouldI.question).to.equal('Should I move to Portland, OR?')
     })
   })
 })

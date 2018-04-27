@@ -9,8 +9,9 @@ router.get('/', (req, res, next) => {
 })
 
 router.post('/', (req, res, next) => {
-  console.log('REQ BODY', req.body)
   Decision.create(req.body)
-    .then(created => res.json(created))
+    .then(created => {
+      res.json(created)
+    })
     .catch(next)
 })

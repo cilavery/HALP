@@ -6,17 +6,19 @@ const CREATE_DECISION = 'CREATE_DECISION'
 
 //action creators
 const createDecision = (decision) => {
-  type: CREATE_DECISION,
-  decision
+  return {
+    type: CREATE_DECISION,
+    decision
+  }
 }
 
 //thunks
 export const postDecision = (body) => {
-  return function (dispatch) {
+  return (dispatch) => {
     axios.post('/api/decisions', body)
       .then(res => res.data)
-      .then(decision => {
-        dispatch(createDecision(decision))
+      .then(created => {
+        dispatch(createDecision(created))
       })
       .catch(err => console.error(err))
   }

@@ -1,3 +1,7 @@
+/* * {
+  border: 1px solid red;
+} */
+
 body {
   font-family: sans-serif;
 }
@@ -18,4 +22,53 @@ nav a {
 form div {
   margin: 1em;
   display: inline-block;
+}
+
+.form-style {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  font-size: 1.5em;
+  color: rgb(121, 166, 210)
+}
+
+.btn-style {
+  -webkit-border-radius: 58;
+  -moz-border-radius: 58;
+  border-radius: 58px;
+  -webkit-box-shadow: 1px 2px 7px #666666;
+  -moz-box-shadow: 1px 2px 7px #666666;
+  box-shadow: 1px 2px 7px #666666;
+  font-family: Arial;
+  color: white;
+  font-size: 13px;
+  background: #fa969b;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn-style:hover {
+  background: #74e3a4;
+  text-decoration: none;
+}
+
+.points {
+  display: flex;
+  flex-direction: row;
+}
+
+.you-should {
+  flex: 1 1;
+}
+
+.you-should-not {
+  flex: 1 1;
+}
+
+.btn-point {
+  border: none;
+  color: transparent;
+  background: transparent;
+  display: none;
+  outline: 0;
 }
