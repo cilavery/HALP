@@ -52,6 +52,12 @@ class YouShould extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+
+  }
+}
+
 const mapDispatchToProps = (dispatch) => {
   return {
     setProPoint: function(e, decisionId) {

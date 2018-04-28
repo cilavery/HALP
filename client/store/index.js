@@ -6,13 +6,15 @@ import user from './user'
 import decision from './decision'
 import posPoint from './posPoints'
 import conPoint from './conPoints'
+import allPoints from './allPoints'
 
 
 const reducer = combineReducers({
   user,
   decision,
   posPoint,
-  conPoint
+  conPoint,
+  allPoints
 })
 
 const middleware = composeWithDevTools(applyMiddleware(
@@ -26,3 +28,4 @@ export * from './user'
 export * from './decision'
 export * from './posPoints'
 export * from './conPoints'
+export * from './allPoints'

@@ -7,19 +7,13 @@ import {postDecision} from '../store'
 
 
 class Decision extends Component {
-  constructor() {
-    super()
-
-  }
-
   render() {
-
     return (
       <div>
         {
           !this.props.decision.question
           ? <h1>What is your mind grappling with?</h1>
-          : <h1>SHOULD I: {this.props.decision.question}?</h1>
+          : <h1>SHOULD I: "{this.props.decision.question}?"</h1>
         }
 
         {
@@ -27,11 +21,9 @@ class Decision extends Component {
           ? <DecisionForm postDecision={(e) => this.props.loadPostDecision(e)}/>
           : <Points decision={this.props.decision} posPoints={this.props.posPoints} conPoints={this.props.conPoints}/>
         }
-
       </div>
     )
   }
-
 }
 
 

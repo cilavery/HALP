@@ -8,6 +8,12 @@ router.get('/', (req, res, next) => {
     .catch(next)
 })
 
+router.get('/points', (req, res, next) => {
+  Point.findAll()
+    .then(points => res.json(points))
+    .catch(next)
+})
+
 router.post('/', (req, res, next) => {
   Decision.create(req.body)
     .then(created => {

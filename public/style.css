@@ -4,6 +4,7 @@
 
 body {
   font-family: sans-serif;
+  background-color: #ecf2f9;
 }
 
 a {
@@ -76,4 +77,15 @@ form div {
   outline: none !important;
   font-size:0;
   display: block;
+}
+
+.btn-results {
+  display: flex;
+  padding-top: 5em;
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+#results {
+  flex: 1;
 }
