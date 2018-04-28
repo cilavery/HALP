@@ -1,18 +1,18 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
-import {fetchPoints} from '../store'
 import { VictoryPie, VictoryTooltip } from 'victory'
+import {fetchPoints} from '../store'
+import {Link} from 'react-router-dom'
 
-class Results extends Component {
+class ProsResults extends Component {
 
   componentDidMount() {
     this.props.loadAllPoints()
   }
 
   render() {
-
     const resultPie = filterData(this.props.allPoints, this.props.decision.id)
+    const posDataResult = posData(this.props.allPoints, this.props.decision.id)
     const prosWeight = resultPie[0].y
     const consWeight = resultPie[1].y
 
@@ -32,10 +32,10 @@ class Results extends Component {
           labelComponent={<VictoryTooltip/>}
           width={400}
           height={400}
-          data={resultPie}
-          x="x"
-          y="y"
-          colorScale={["#ffff1a", "#6666ff"]}
+          data={posDataResult}
+          x="name"
+          y="weight"
+          colorScale="warm"
           innerRadius={50}
           padding={55}
           style={{
@@ -49,6 +49,14 @@ class Results extends Component {
       </div>
     )
   }
+}
+
+const posData = (allData, id) => {
+  const data = allData.filter(data => data.decisionId === id)
+  const findPros = data.filter(pro => {
+    return pro.category === "pro"
+  })
+  return findPros
 }
 
 const filterData = (allData, id) => {
@@ -86,4 +94,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 }
 
 
-export default Results = connect(mapStateToProps, mapDispatchToProps)(Results)
+export default ProsResults = connect(mapStateToProps, mapDispatchToProps)(ProsResults)

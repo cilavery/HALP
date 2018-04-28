@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {withRouter, Route, Switch} from 'react-router-dom'
 import PropTypes from 'prop-types'
-import {Login, Signup, UserHome, Decision, Results} from './components'
+import {Login, Signup, UserHome, Decision, Results, ProsResults, ConsResults} from './components'
 import {me} from './store'
 
 
@@ -20,7 +20,9 @@ class Routes extends Component {
     return (
       <Switch>
         <Route exact path="/" component={Decision} />
-        <Route path="/results" render={() => <Results decision={this.state}/>}/>
+        <Route exact path="/results" render={() => <Results decision={this.state}/>}/>
+        <Route path="/results/pros" component={ProsResults} />
+        <Route path="/results/cons" component={ConsResults} />
       </Switch>
     )
   }

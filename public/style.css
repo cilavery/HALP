@@ -89,3 +89,8 @@ form div {
 #results {
   flex: 1;
 }
+
+.results-links {
+  display: flex;
+  flex-direction: column;
+}

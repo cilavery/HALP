@@ -13,7 +13,7 @@ class Decision extends Component {
         {
           !this.props.decision.question
           ? <h1>What is your mind grappling with?</h1>
-          : <h1>SHOULD I: "{this.props.decision.question}?"</h1>
+          : <h1>SHOULD I: {this.props.decision.question}</h1>
         }
 
         {
