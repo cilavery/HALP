@@ -1,7 +1,6 @@
-import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react'
 
-export default function DecisionForm(props) {
+export default function DecisionForm (props) {
 
     return (
       <form onSubmit={props.postDecision}>

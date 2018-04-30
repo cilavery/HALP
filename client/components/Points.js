@@ -33,8 +33,8 @@ handleMouseHoverRight() {
     return (
       <div>
         <div className="points">
-          <div onMouseEnter={this.handleMouseHoverLeft} className="you-should">
-            <h1>You Should:</h1>
+          <div onMouseEnter={this.handleMouseHoverLeft} className="should-you">
+            <h1 className="should-you">You Should:</h1>
             {
               this.state.isHoveringLeft &&
               <div>
@@ -42,7 +42,7 @@ handleMouseHoverRight() {
               </div>
             }
           </div>
-          <div onMouseEnter={this.handleMouseHoverRight} className="you-should-not">
+          <div onMouseEnter={this.handleMouseHoverRight} className="should-you">
             <h1>You Should Not:</h1>
           {
             this.state.isHoveringRight &&

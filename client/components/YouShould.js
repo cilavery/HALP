@@ -21,7 +21,6 @@ class YouShould extends Component {
   }
 
   clearForm() {
-    console.log('hit clear form')
     this.setState({
       pointName: '',
       weight: ''
@@ -33,7 +32,7 @@ class YouShould extends Component {
     const posPoints = this.props.point
 
     return (
-      <div>
+      <div className="should-you">
         {
           posPoints && posPoints.map(point => {
             return (
@@ -42,10 +41,13 @@ class YouShould extends Component {
           })
         }
 
-        <form onSubmit={(e) => this.props.setProPoint(e,decisionId)}>
+        <form onSubmit={(e) => {
+          this.props.setProPoint(e,decisionId)
+          this.clearForm()
+          }}>
           <input type="text" name="pointName" placeholder="Reason" className="form-style" onChange={(e) => this.handleChange(e)} value={this.state.pointName} size="35"/>
           <input type="text" name="weight" placeholder="weight 1-10" className="form-style" size="11" onChange={(e) => this.handleChange(e)} value={this.state.weight}/>
-          <button type="submit" className=".btn-point"></button>
+          <button type="submit" className="btn-point"></button>
         </form>
       </div>
     )

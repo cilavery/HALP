@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {fetchPoints} from '../store'
-import { VictoryPie, VictoryTooltip } from 'victory'
+import { VictoryPie, VictoryTooltip, VictoryTransition } from 'victory'
 
 class Results extends Component {
 
@@ -28,24 +28,29 @@ class Results extends Component {
           <Link to="/results/pros">Pros</Link>
           <Link to="/results/cons">Cons</Link>
         </div>
-        <VictoryPie
-          labelComponent={<VictoryTooltip/>}
-          width={400}
-          height={400}
-          data={resultPie}
-          x="x"
-          y="y"
-          colorScale={["#ffff1a", "#6666ff"]}
-          innerRadius={50}
-          padding={55}
-          style={{
-            labels: {
-              fontSize: 8,
-              fill: "#c43a31",
-              padding: 4
-            }
-          }}
-        />
+        <div className="chart">
+
+          <VictoryPie
+            animate={{ duration: 2000 }}
+            labelComponent={<VictoryTooltip cornerRadius={1}/>}
+            width={200}
+            height={200}
+            data={resultPie}
+            x="x"
+            y="y"
+            colorScale={["#ffff1a", "#6666ff"]}
+            innerRadius={10}
+            padding={{top: 10, bottom: 20, left: 30, right: 30 }}
+            style={{
+              labels: {
+                fontSize: 5,
+                fill: "black",
+                padding: 2
+              }
+            }}
+          />
+
+        </div>
       </div>
     )
   }
