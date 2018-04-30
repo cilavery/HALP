@@ -4,6 +4,7 @@ import axios from 'axios'
 //action types
 const CREATE_DECISION = 'CREATE_DECISION'
 
+
 //action creators
 const createDecision = (decision) => {
   return {
@@ -11,6 +12,7 @@ const createDecision = (decision) => {
     decision
   }
 }
+
 
 //thunks
 export const postDecision = (body) => {
@@ -23,6 +25,7 @@ export const postDecision = (body) => {
       .catch(err => console.error(err))
   }
 }
+
 
 //reducer
 export default function(state = [], action) {

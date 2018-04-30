@@ -28,24 +28,26 @@ class ConsResults extends Component {
           <Link to="/results/pros">Pros</Link>
           <Link to="/results/cons">Cons</Link>
         </div>
+        <div className="chart">
         <VictoryPie
-          labelComponent={<VictoryTooltip/>}
-          width={400}
-          height={400}
+          labelComponent={<VictoryTooltip cornerRadius={1}/>}
+          width={200}
+          height={200}
           data={conDataResult}
           x="name"
           y="weight"
-          colorScale="cool"
-          innerRadius={50}
-          padding={55}
+          colorScale="green"
+          innerRadius={10}
+          padding={{top: 10, bottom: 20, left: 30, right: 30 }}
           style={{
             labels: {
-              fontSize: 8,
-              fill: "#c43a31",
-              padding: 4
+              fontSize: 5,
+              fill: "black",
+              padding: 2
             }
           }}
         />
+        </div>
       </div>
     )
   }

@@ -3,12 +3,18 @@
 } */
 
 body {
-  font-family: sans-serif;
-  background-color: #ecf2f9;
+  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  /* background-color: #ecf2f9; */
 }
 
 a {
   text-decoration: none;
+}
+
+#app-bar-title {
+  font-family: 'Titan One', cursive;
+  background-color: black;
 }
 
 label {
@@ -32,6 +38,12 @@ form div {
   font-size: 1.3em;
   color: rgb(121, 166, 210);
   outline: none;
+}
+
+.header-question {
+  display:flex;
+  justify-content: center;
+  align-items: row;
 }
 
 .btn-style {
@@ -58,14 +70,15 @@ form div {
 
 .points {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: column; */
+}
+.points-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.you-should {
-  flex: 1 1;
-}
-
-.you-should-not {
+.should-you {
   flex: 1 1;
 }
 
@@ -81,16 +94,21 @@ form div {
 
 .btn-results {
   display: flex;
+  justify-content: center;
   padding-top: 5em;
   padding-left: 4em;
   padding-right: 4em;
 }
 
-#results {
-  flex: 1;
+.chart {
+  display:flex;
+  justify-content: center;
+  align-items: row;
+  width: 100vw;
 }
 
 .results-links {
   display: flex;
   flex-direction: column;
 }
+
