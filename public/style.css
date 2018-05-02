@@ -44,6 +44,7 @@ form div {
   display:flex;
   justify-content: center;
   align-items: row;
+  padding-top: 35px;
 }
 
 .btn-style {
@@ -80,6 +81,7 @@ form div {
 
 .should-you {
   flex: 1 1;
+  padding-left: 15px;
 }
 
 .btn-point {
@@ -112,3 +114,16 @@ form div {
   flex-direction: column;
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#c2d6d6;
+  color: white;
+  text-align: center;
+}
+
+.mic-pic {
+  height: 1.4em;
+}

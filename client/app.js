@@ -10,6 +10,9 @@ const App = () => {
     <div>
       <Link to="/"><AppBar title="Halp!" id="app-bar-title"/></Link>
       <Routes />
+      <div className="footer">
+         <p>A Grace Hopper Academy Stackathon Project by Cecilia Avery</p>
+      </div>
     </div>
   )
 }

@@ -27,6 +27,8 @@ export default class DecisionForm extends Component {
 
     return (
     <div>
+      <img src='../mic.png'
+      className="mic-pic"/>
       <button onClick={() => this.setState({ start: true })}>start</button>
       <button onClick={() => this.setState({ stop: true })}>stop</button>
         {this.state.start && (

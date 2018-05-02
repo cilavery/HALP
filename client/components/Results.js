@@ -40,7 +40,7 @@ class Results extends Component {
             y="y"
             colorScale={["#ffff1a", "#6666ff"]}
             innerRadius={10}
-            padding={{top: 10, bottom: 20, left: 30, right: 30 }}
+            padding={{top: 5, bottom: 20, left: 30, right: 30 }}
             style={{
               labels: {
                 fontSize: 5,
