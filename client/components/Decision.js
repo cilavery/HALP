@@ -21,7 +21,7 @@ class Decision extends Component {
 
         {
           !this.props.decision.question
-          ? <div className="header-question">
+          ? <div className="question">
               <DecisionForm postDecision={(e) => this.props.loadPostDecision(e)}/>
               </div>
           : <div className="points-section">
