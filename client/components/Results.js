@@ -33,8 +33,8 @@ class Results extends Component {
           <VictoryPie
             animate={{ duration: 2000 }}
             labelComponent={<VictoryTooltip cornerRadius={1}/>}
-            width={200}
-            height={200}
+            width={100}
+            height={100}
             data={resultPie}
             x="x"
             y="y"

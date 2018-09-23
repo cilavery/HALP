@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import VoiceRecognition from './VoiceRecognition'
+//import VoiceRecognition from './VoiceRecognition'
 
 export default class DecisionForm extends Component {
   constructor() {
